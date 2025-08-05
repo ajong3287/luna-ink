@@ -34,21 +34,23 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-20 max-w-4xl mx-auto px-4">
-        <Image 
-          src="https://i.imgur.com/sF5A9dC.png" 
-          alt="Dreamy Moon Tattoo" 
-          width={200} 
-          height={200} 
-          className="mx-auto mb-8 block opacity-80"
-          priority
-        />
-        <h1 className="text-5xl md:text-7xl font-bold mb-4 animate-fadeInUp">
+        <div className="mb-8 animate-fadeInUp">
+          <Image 
+            src="https://i.imgur.com/sF5A9dC.png" 
+            alt="Dreamy Moon Tattoo" 
+            width={250} 
+            height={250} 
+            className="mx-auto block opacity-90 drop-shadow-2xl"
+            priority
+          />
+        </div>
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fadeInUp text-white drop-shadow-lg">
           달빛이 스며든 2주, LUNA INK
         </h1>
-        <p className="text-xl md:text-2xl italic opacity-90 animate-fadeInUp animation-delay-200">
+        <p className="text-xl md:text-2xl italic opacity-90 animate-fadeInUp animation-delay-200 mb-8 text-gray-200">
           당신의 피부 위에서 펼쳐지는 몽환적인 이야기
         </p>
-        <button className="mt-8 bg-[#f0a500] text-[#1a1a2e] rounded-lg px-8 py-4 text-lg font-bold cursor-pointer transition-all hover:scale-105 hover:shadow-xl animate-fadeInUp animation-delay-400">
+        <button className="bg-[#f0a500] text-[#1a1a2e] rounded-lg px-10 py-4 text-lg font-bold cursor-pointer transition-all hover:scale-105 hover:shadow-2xl animate-fadeInUp animation-delay-400 shadow-lg">
           컬렉션 보기
         </button>
       </div>

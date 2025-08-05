@@ -14,9 +14,9 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 z-50 w-full px-5 py-4 lg:px-20 bg-[rgba(26,26,46,0.8)] backdrop-blur-md">
-      <nav className="flex items-center justify-between">
-        <div className="text-2xl font-bold text-white">LUNA INK</div>
+    <header className="fixed top-0 z-50 w-full px-5 py-4 lg:px-20 bg-[rgba(26,26,46,0.9)] backdrop-blur-md border-b border-white/10">
+      <nav className="flex items-center justify-between max-w-7xl mx-auto">
+        <div className="text-2xl font-bold text-white tracking-wider">LUNA INK</div>
         
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-8">

@@ -34,8 +34,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
-      <body className={`${notoSerifKr.variable} ${playfairDisplay.variable}`}>{children}</body>
+    <html lang="ko" className={`${notoSerifKr.variable} ${playfairDisplay.variable}`}>
+      <body className="font-noto-serif-kr antialiased">{children}</body>
     </html>
   );
 }
