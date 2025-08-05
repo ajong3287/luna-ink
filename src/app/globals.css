@@ -1,26 +1,68 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    @apply font-noto-serif-kr bg-[#1a1a2e] text-[#e0e0e0] leading-relaxed;
+}
+
+.font-noto-serif-kr {
+    font-family: var(--font-noto-serif-kr);
+}
+
+.font-playfair-display {
+    font-family: var(--font-playfair-display);
+}
+
+/* Custom styles for elements not fully covered by Tailwind or for specific overrides */
+
+/* Header and Navigation */
+header {
+    @apply fixed top-0 z-50 w-full px-5 py-4 lg:px-20;
+}
+
+nav a {
+    @apply text-lg;
+}
+
+/* Hero Section */
+#hero {
+    @apply flex h-screen min-h-[700px] items-center justify-center text-center text-white;
+}
+
+.hero-text {
+    @apply relative z-10;
+}
+
+.hero-image {
+    @apply mx-auto mb-8 block;
+}
+
+/* Sections */
+section {
+    @apply py-20 text-center lg:py-32 px-5;
+}
+
+/* How-to Steps */
+#how-to .step {
+    @apply p-8 rounded-lg w-full md:w-auto;
+}
+
+#how-to .step-icon {
+    @apply text-4xl font-bold mb-2;
+}
+
+/* B2B Partnership */
+#b2b .benefit {
+    @apply flex-1;
+}
+
+/* Partner List */
+.partner-item {
+    @apply rounded-lg px-4 py-2;
+}
+
+/* Footer */
+footer {
+    @apply py-8 text-center text-sm;
 }
