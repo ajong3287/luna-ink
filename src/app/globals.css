@@ -2,67 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    @apply font-noto-serif-kr bg-[#1a1a2e] text-[#e0e0e0] leading-relaxed;
+/* Custom Animations */
+@keyframes float {
+  from {
+    transform: translateY(100vh) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100vh) translateX(100px);
+    opacity: 0;
+  }
 }
 
-.font-noto-serif-kr {
-    font-family: var(--font-noto-serif-kr);
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.font-playfair-display {
-    font-family: var(--font-playfair-display);
+/* Animation Classes */
+.animate-float {
+  animation: float 15s infinite linear;
 }
 
-/* Custom styles for elements not fully covered by Tailwind or for specific overrides */
-
-/* Header and Navigation */
-header {
-    @apply fixed top-0 z-50 w-full px-5 py-4 lg:px-20;
+.animate-fadeInUp {
+  animation: fadeInUp 1.5s ease-out forwards;
+  opacity: 0;
 }
 
-nav a {
-    @apply text-lg;
+.animation-delay-200 {
+  animation-delay: 0.2s;
 }
 
-/* Hero Section */
-#hero {
-    @apply flex h-screen min-h-[700px] items-center justify-center text-center text-white;
+.animation-delay-400 {
+  animation-delay: 0.4s;
 }
 
-.hero-text {
-    @apply relative z-10;
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-.hero-image {
-    @apply mx-auto mb-8 block;
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-/* Sections */
-section {
-    @apply py-20 text-center lg:py-32 px-5;
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
 }
 
-/* How-to Steps */
-#how-to .step {
-    @apply p-8 rounded-lg w-full md:w-auto;
+::-webkit-scrollbar-thumb {
+  background: #f0a500;
+  border-radius: 4px;
 }
 
-#how-to .step-icon {
-    @apply text-4xl font-bold mb-2;
+::-webkit-scrollbar-thumb:hover {
+  background: #d48f00;
 }
 
-/* B2B Partnership */
-#b2b .benefit {
-    @apply flex-1;
+/* Selection Color */
+::selection {
+  background: #f0a500;
+  color: #1a1a2e;
 }
 
-/* Partner List */
-.partner-item {
-    @apply rounded-lg px-4 py-2;
+/* Focus Styles */
+a:focus,
+button:focus {
+  outline: 2px solid #f0a500;
+  outline-offset: 2px;
 }
 
-/* Footer */
-footer {
-    @apply py-8 text-center text-sm;
+/* Responsive Image */
+img {
+  max-width: 100%;
+  height: auto;
 }
