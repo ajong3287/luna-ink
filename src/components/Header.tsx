@@ -16,15 +16,15 @@ export default function Header() {
   return (
     <header className="fixed top-0 z-50 w-full px-5 py-4 lg:px-20 bg-[rgba(26,26,46,0.9)] backdrop-blur-md border-b border-white/10">
       <nav className="flex items-center justify-between max-w-7xl mx-auto">
-        <div className="text-2xl font-bold text-white tracking-wider">LUNA INK</div>
+        <div className="text-4xl md:text-5xl font-bold text-white tracking-wider font-playfair-display">LUNA INK</div>
         
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden md:flex items-center gap-6 lg:gap-10">
           {navItems.map((item) => (
             <li key={item.href}>
               <a 
                 href={item.href} 
-                className="text-[#e0e0e0] hover:text-[#f0a500] transition-colors duration-300 text-lg"
+                className="text-[#e0e0e0] hover:text-[#f0a500] transition-colors duration-300 text-base lg:text-lg font-medium"
               >
                 {item.label}
               </a>
@@ -50,13 +50,13 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden mt-4 pb-4 border-t border-gray-700">
-          <ul className="space-y-2 mt-4">
+        <div className="md:hidden absolute top-full left-0 right-0 mt-0 bg-[rgba(26,26,46,0.95)] backdrop-blur-md border-b border-white/10">
+          <ul className="space-y-1 py-4 px-5">
             {navItems.map((item) => (
               <li key={item.href}>
                 <a
                   href={item.href}
-                  className="block text-[#e0e0e0] hover:text-[#f0a500] transition-colors duration-300"
+                  className="block py-3 text-[#e0e0e0] hover:text-[#f0a500] transition-colors duration-300 text-lg"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

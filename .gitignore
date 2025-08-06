@@ -43,3 +43,7 @@ next-env.d.ts
 # logs
 dev.log
 *.log
+
+# temporary markdown files
+*.md
+!README.md
